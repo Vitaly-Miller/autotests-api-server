@@ -1,0 +1,12 @@
+aiosqlite
+email-validator
+fastapi
+pydantic
+pydantic-settings
+uvicorn
+greenlet
+sqlalchemy
+passlib
+bcrypt==4.0.1       # НЕ МЕНЯТЬ
+pyjwt
+python-multipart
