@@ -11,6 +11,9 @@ from utils.clients.database.repository import BasePostgresRepository
 
 password_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+DEFAULT_USER_EMAIL = "user@example.com"
+DEFAULT_USER_PASSWORD = "string"
+
 
 class UsersRepository(BasePostgresRepository):
     model = UsersModel
@@ -43,6 +46,19 @@ class UsersRepository(BasePostgresRepository):
             return None
 
         return user
+
+    async def ensure_default_user(self) -> UsersModel:
+        user = await self.get_by_email(DEFAULT_USER_EMAIL)
+        if user:
+            return user
+
+        return await self.create({
+            "email": DEFAULT_USER_EMAIL,
+            "password": DEFAULT_USER_PASSWORD,
+            "last_name": "Default",
+            "first_name": "Default",
+            "middle_name": "Default",
+        })
 
 
 async def get_users_repository(

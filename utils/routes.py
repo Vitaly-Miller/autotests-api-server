@@ -7,6 +7,7 @@ class APIRoutes(str, Enum):
     COURSES = '/courses'
     EXERCISES = '/exercises'
     AUTHENTICATION = '/authentication'
+    CLEANUP = '/cleanup'
 
     def as_tag(self) -> str:
         return self[1:]
