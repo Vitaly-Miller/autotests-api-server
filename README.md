@@ -1,4 +1,4 @@
-# qa-automation-engineer-api-course
+# Autotests API server
 
 ## Install requirements
 
