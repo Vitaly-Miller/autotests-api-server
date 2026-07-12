@@ -36,7 +36,7 @@ JWT_ACCESS_TOKEN_EXPIRE=1800
 JWT_REFRESH_TOKEN_EXPIRE=5184000
 ```
 
-## ▶️ Run server ⬇︎⬇︎⬇︎
+## ▶️ Run Server ⬇︎⬇︎⬇︎
 
 ```shell
 uvicorn main:app --reload
