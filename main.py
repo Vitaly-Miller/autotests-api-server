@@ -9,7 +9,7 @@ from apps.users.api import users_app_router
 from services.database.repositories.users import UsersRepository
 from utils.clients.database.engine import create_database, get_database_engine
 
-app = FastAPI(title="QA Automation engineer course API")
+app = FastAPI(title="QA Automation API Server")
 
 app.mount("/static", StaticFiles(directory="storage"), name="static")
 
